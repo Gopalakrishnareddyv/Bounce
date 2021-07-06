@@ -19,7 +19,7 @@ public class ObstacleMove : MonoBehaviour
     }
     IEnumerator Disable()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(15);
         this.gameObject.SetActive(false);
     }
 }   

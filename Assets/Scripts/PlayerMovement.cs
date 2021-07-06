@@ -10,13 +10,18 @@ public class PlayerMovement : MonoBehaviour
     bool grounded = true;
     Animator animator;
     SpriteRenderer rend;
-
+    Score scoretext;
+    AudioSource playeraudio;
+    public AudioClip jumpSound;
+    public AudioClip coinSound;
     // Start is called before the first frame update
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
+        scoretext =GameObject.Find("ScoreManage").GetComponent<Score>();
+        playeraudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 Jump();
                 animator.SetTrigger("Jump");
+                playeraudio.clip = jumpSound;
+                playeraudio.Play();
             }
             else
             {
@@ -60,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             grounded = true;
         }
-        if (collision.gameObject.tag == "Enemy")
+        if ((collision.gameObject.tag == "Enemy")||(collision.gameObject.tag=="EnemyMove")||collision.gameObject.tag=="flame")
         {
 
             SceneManager.LoadScene(1);
@@ -68,19 +75,27 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
+            playeraudio.clip = coinSound;
+            playeraudio.Play();
+            scoretext.Increment();
         }
-        if (collision.gameObject.tag == "Enemy")
-        {
-            animator.SetTrigger("Death");
-            StartCoroutine("GameoverUI");
-        }
+       
+        
 
     }
-    IEnumerator GameoverUI()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Water")
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+    /*IEnumerator GameoverUI()
     {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(1);
-    }
+        animator.SetTrigger("Death");
+    }*/
     private void Jump()
     {
         grounded = false;
