@@ -13,7 +13,7 @@ public class SAvePlayerData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastscore =GetComponent<Score>();
+        lastscore =GameObject.Find("ScoreManage").GetComponent<Score>();
     }
 
     // Update is called once per frame

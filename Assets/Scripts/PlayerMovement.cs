@@ -45,13 +45,20 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             playerRB.velocity =Vector2.right*10.0f;
-            animator.SetTrigger("Walk");
+            
             Flipright();
+            if (grounded)
+            {
+                animator.SetTrigger("Walk");
+            }
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             playerRB.velocity = Vector2.left * 10.0f;
-            animator.SetTrigger("Walk");
+            if (grounded)
+            {
+                animator.SetTrigger("Walk");
+            }
             Flipleft();
         }
         else
@@ -87,15 +94,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Water")
         {
+            //Winning movement
             SceneManager.LoadScene(1);
         }
     }
-    /*IEnumerator GameoverUI()
-    {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(1);
-        animator.SetTrigger("Death");
-    }*/
+    
     private void Jump()
     {
         grounded = false;

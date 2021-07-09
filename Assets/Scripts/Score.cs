@@ -12,15 +12,5 @@ public class Score : MonoBehaviour
         score++;
         text.text = "Score : " + score;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
