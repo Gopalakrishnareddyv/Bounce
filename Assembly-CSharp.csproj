@@ -102,6 +102,7 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
     <Compile Include="Assets\Scripts\Rotation.cs" />
+    <Compile Include="Assets\ObstacleInactive.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineGroupComposer.cs" />
     <Compile Include="Assets\Scripts\ObstacleMove.cs" />
     <Compile Include="Assets\Scripts\Panel.cs" />
@@ -120,11 +121,26 @@
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
-    <Compile Include="Assets\ObstacleInactive.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienGreen.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\Player\p1_spritesheet.txt" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\Player\p2_spritesheet.txt" />
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienPink.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienYellow.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\enemies.xml" />
      <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\Player\p3_spritesheet.txt" />
+     <None Include="Assets\platformer-art-complete-pack-0\Mushroom expansion\PNG\spritesheet.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\aliens.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\Enemies\enemies_spritesheet.txt" />
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienBlue.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\Tiles\tiles_spritesheet.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienBeige.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\HUD\hud_spritesheet.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\Base pack\Items\items_spritesheet.xml" />
+     <None Include="Assets\platformer-art-complete-pack-0\license.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

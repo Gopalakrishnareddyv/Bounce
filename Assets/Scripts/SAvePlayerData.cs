@@ -19,17 +19,9 @@ public class SAvePlayerData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SetData();
-            Debug.Log("Saved");
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            GetData();
-        }
+        
     }
-    void SetData()
+    public void SetData()
     {
         string path = Application.persistentDataPath + "/PlayerDetail.file";
         FileStream fs = new FileStream(path, FileMode.OpenOrCreate);
@@ -41,7 +33,7 @@ public class SAvePlayerData : MonoBehaviour
         bw.Close();
         fs.Close();
     }
-    void GetData()
+    public void GetData()
     {
         string path = Application.persistentDataPath + "/PlayerDetail.file";
         FileStream fs = new FileStream(path, FileMode.Open);

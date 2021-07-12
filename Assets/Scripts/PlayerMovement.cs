@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     AudioSource playeraudio;
     public AudioClip jumpSound;
     public AudioClip coinSound;
+    SAvePlayerData saveGet;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         scoretext =GameObject.Find("ScoreManage").GetComponent<Score>();
         playeraudio = GetComponent<AudioSource>();
+        saveGet =GameObject.Find("Player").GetComponent<SAvePlayerData>();
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                animator.SetTrigger("Idle");
+                animator.SetTrigger("Stand");
             }
 
         }
@@ -63,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("Idle");
+            animator.SetTrigger("Stand");
         }
         //animator.SetTrigger("Idle");
 
@@ -78,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
         {
 
             SceneManager.LoadScene(1);
+            saveGet.SetData();
+            saveGet.GetData();
         }
         if (collision.gameObject.tag == "Coin")
         {
@@ -96,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
         {
             //Winning movement
             SceneManager.LoadScene(1);
+            saveGet.SetData();
+            saveGet.GetData();
         }
     }
     

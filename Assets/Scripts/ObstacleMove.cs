@@ -22,13 +22,12 @@ public class ObstacleMove : MonoBehaviour
         yield return new WaitForSeconds(17);
         this.gameObject.SetActive(false);
     }*/
-    private void OnCollisionnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "inactive")
         {
-            collision.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
-    
+
 }   
