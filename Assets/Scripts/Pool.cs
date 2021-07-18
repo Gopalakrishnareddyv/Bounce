@@ -23,8 +23,10 @@ public class Pool : MonoBehaviour
         pooleditems = new List<GameObject>();
         foreach(PoolItems item in items)
         {
+            
             for (int i = 0; i < item.number; i++)
             {
+                
                 GameObject prefabobj= Instantiate(item.prefab);
                 prefabobj.SetActive(false);
                 pooleditems.Add(prefabobj);

@@ -29,7 +29,7 @@ public class SAvePlayerData : MonoBehaviour
         bw.Write("Player Name : " + playerName);
         bw.Write("Player Gender : " + playerGender);
         bw.Write("Region : " + Region);
-        bw.Write("Score is "+lastscore.score.ToString());
+        bw.Write("Score is : "+lastscore.score.ToString());
         bw.Close();
         fs.Close();
     }

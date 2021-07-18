@@ -7,10 +7,12 @@ public class Score : MonoBehaviour
 {
     public Text text;
     public int score = 0;
+    public static string lastTextScore;
     public void Increment()
     {
         score++;
         text.text = "Score : " + score;
+        lastTextScore = text.text;
     }
     
 }

@@ -121,6 +121,7 @@
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
+    <Compile Include="Assets\LastSCore.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienGreen.xml" />

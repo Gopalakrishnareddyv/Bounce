@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        anim.SetTrigger("MoveEnemy");
     }
 }

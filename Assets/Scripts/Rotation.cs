@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class Rotation : MonoBehaviour
     void Update()
     {
 
-        transform.Rotate(new Vector3(0, 0, 1f));
+        //transform.Rotate(new Vector3(0, 0, 1f));
+        anim.SetTrigger("Move");
     }
 }
