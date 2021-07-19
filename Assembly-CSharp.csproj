@@ -115,13 +115,14 @@
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachinePOV.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
+    <Compile Include="Assets\LastSCore.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
-    <Compile Include="Assets\LastSCore.cs" />
+    <Compile Include="Assets\VolumeControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\platformer-art-complete-pack-0\Extra animations and enemies\Spritesheets\alienGreen.xml" />
